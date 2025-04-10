@@ -1,0 +1,160 @@
+/* 信息登记表样式 */
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 表单样式 */
+form {
+    width: 100%;
+}
+
+fieldset {
+    margin-bottom: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+legend {
+    font-weight: bold;
+    color: #444;
+    padding: 0 0.5em;
+}
+
+.form-group {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    width: 30%;
+    text-align-last: justify; /* 文字末尾对齐 */
+    margin-right: 1em;
+    font-weight: 500;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.radio-group label {
+    width: auto;
+    margin-right: 1.5em;
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    flex: 1;
+    padding: 0.8em; /* 使用em单位的内边距 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border 0.3s;
+}
+
+input[type="radio"] {
+    margin-right: 0.5em;
+}
+
+input[type="file"] {
+    padding: 0.5em 0;
+}
+
+select {
+    background-color: white;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* 聚焦状态样式 */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 0.3em rgba(74, 144, 226, 0.3);
+}
+
+/* 按钮样式 */
+.form-buttons {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+button {
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 0 0.5em;
+}
+
+button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* 响应式布局 */
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    label {
+        width: 100%;
+        margin-bottom: 0.5em;
+        text-align-last: left;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+    }
+} 

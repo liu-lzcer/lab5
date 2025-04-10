@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息登记表</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>信息登记表</h1>
+        <form id="registrationForm">
+            <fieldset>
+                <legend>个人基本信息</legend>
+                
+                <div class="form-group">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">年龄：</label>
+                    <input type="number" id="age" name="age" min="1" max="120" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>性别：</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">男</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">女</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>联系方式</legend>
+                
+                <div class="form-group">
+                    <label for="phone">电话号码：</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">邮箱：</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>其他信息</legend>
+                
+                <div class="form-group">
+                    <label for="birthdate">出生日期：</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="education">学历：</label>
+                    <select id="education" name="education" required>
+                        <option value="">请选择</option>
+                        <option value="highschool">高中</option>
+                        <option value="college">大专</option>
+                        <option value="bachelor">本科</option>
+                        <option value="master">硕士</option>
+                        <option value="phd">博士</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="idCard">身份证：</label>
+                    <input type="file" id="idCard" name="idCard" accept="image/*,.pdf">
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">备注：</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                </div>
+            </fieldset>
+            
+            <div class="form-buttons">
+                <button type="submit">提交</button>
+                <button type="reset">重置</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html> 
